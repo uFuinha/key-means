@@ -56,7 +56,7 @@ function main() {
     let oldMeans = []
     let balls = document.querySelectorAll('.ball');
 
-    var MARGIN = 200;
+    var MARGIN = 100;
     var updateState = function (items, means, buffer, time, interval) {
         setInterval(function () {
             items.forEach(item => {
