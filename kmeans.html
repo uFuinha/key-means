@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            --size: 25px;
+            transition: 0.2s ease-in-out;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 600px;
+            height: var(--size);
+            background: transparent;
+            margin: 100px auto;
+        }
+
+        #container::after {
+            content: '';
+            position: absolute;
+            background: gray;
+            height: 1px;
+            width: 100%;
+            z-index: -2;
+        }
+
+        .ball {
+            width: var(--size);
+            height: var(--size);
+            border-radius: 50%;
+            background: #ddd;
+            position: absolute;
+            left: 0;
+            border: 1px solid black;
+        }
+
+        .mean {
+            width: calc(var(--size) + 20px);
+            height: calc(var(--size) + 20px);
+            border-radius: 50%;
+            background: #ddd;
+            position: absolute;
+            left: 0;
+            opacity: 0.6;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
