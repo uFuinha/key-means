@@ -57,9 +57,31 @@
             opacity: 0.6;
             z-index: -1;
         }
+
+        .inputs {
+            margin: 20px auto;
+            width: min-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        input {
+            width: 80px;
+            height: 20px;
+            margin: 10px;
+        }
+        button {
+            margin: 10px 0 0 0;
+        }
     </style>
 </head>
 <body>
+    <div class="inputs">
+        <input type="number" id="k-input" placeholder="K">
+        <input type="number" id="ball-quant-input" placeholder="Balls">
+        <button>Ok</button>
+    </div>
     <div id="container"></div>
     <script src="script.js"></script>
 </body>
